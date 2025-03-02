@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #00539CFF;
+}
+.left_nav{
+    width: 100px;
+    height: 55px;
+    padding: 3px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.right_nav{
+    display: flex;
+    align-items: center;
+    a{
+        color: white;
+        font-size: 14.23px;
+        margin-right: 5.5px;
+        text-decoration: none;
+        border: 1px solid rgba(255,255,255,0.7);
+        padding: 3px 5px;
+        border-radius: 2px;
+    }
+    a:hover{
+        background-color: white;
+        color: black;
+    }
+}
+.btn-group{
+    border: 1px solid white;
+    .dropdown-toggle{
+        color: white;
+        padding: 0.5px 5px;
+    }
+}
+.dropdown-menu{
+    .dropdown-item{
+        color: black;
+    }
+}

@@ -1,0 +1,77 @@
+<div>
+<app-top-navbar [name]="name"></app-top-navbar>
+<ngb-carousel *ngIf="showCarousel" #carousel [interval]="5000">
+    <ng-template ngbSlide *ngFor="let img of product_coursel" >
+      <div class="image">
+        <img src="{{img}}" alt="Image is loading">
+      </div>
+    </ng-template>
+    <!-- <ng-template ngbSlide>
+      <div class="image" style="background-image: url('assets/images/dinning2.jpg')">
+        <h1>Graph 2</h1>
+      </div>
+    </ng-template> -->
+  </ngb-carousel>
+  <!-- product details start -->
+<div class="product_info_main">
+  <div class="produt_info_submain">
+    <div class="product_name">{{product?.product_name}}</div>
+    <div class="product_desc">{{product?.product_description}}</div>
+    <div class="product_price">
+      <div class="price">
+        ₹ {{product?.product_discounted_price}}
+      </div>
+      <div class="mrp">
+       MRP ₹ {{product?.product_price}}
+      </div>
+    </div>
+    <div class="others">
+      <span class="other_content">Inclusive of all taxes</span>
+      <span class="saving">SAVE ₹ {{this.savingsOnproduct}} </span>
+    </div>
+      <div class="product_features">
+        <div class="feature"><span>Features</span></div>
+        <li *ngFor="let i of product?.features">{{i}}</li>
+      </div>
+    <div class="product_details">
+      <div class="product_heading"><span>Product Details</span></div>
+      <div class="product_specific">
+        <span class="product_name">Brand</span>
+        <span class="product_val">Nirlon</span>
+      </div>
+      <div class="product_specific">
+        <span class="product_name">Color</span>
+        <span class="product_val">No</span>
+      </div>
+      <div class="product_specific">
+        <span class="product_name">Material</span>
+        <span class="product_val">Wood</span>
+      </div>
+      <div class="product_specific">
+        <span class="product_name">Weight</span>
+        <span class="product_val">8.5kgs</span>
+      </div>
+      <div class="product_specific">
+        <span class="product_name">SKU</span>
+        <span class="product_val">KD2104962</span>
+      </div>
+    </div>
+    <div class="product_features">
+      <div class="feature"><span>Return and Exchange Policy</span></div>
+      <li class="pro1221"><span>Return Policy:</span> A return policy can only be happen if Manufacturing defect,Damaged product delivered,
+        Different product delivered,Product delivered to you is incomplete or has components missing.<a routerLink="/productpolicies">know more</a>
+      </li>
+      <li class="pro1221"><span>Exchange Policy:</span> Exchange can be taken care within 14 days of purchase date.<a routerLink="/productpolicies">know more</a>
+      </li>
+      <li class="pro1221"><span>Exceptions and Restrictions:</span> You may not allow to take screenshots or shoot a video of our product in case of any copy we found. strict actions is taken against the individual or firm.</li>
+      <li class="pro1221"><span>Return Shipping:</span> If you want an exchange of product you have to bear the shipping cost.either one side</li>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
+<!-- Bottom navbar -->
+<app-bottom-navbar [product_id]="this.product_id"></app-bottom-navbar>
+<!-- End of bottom navbar -->

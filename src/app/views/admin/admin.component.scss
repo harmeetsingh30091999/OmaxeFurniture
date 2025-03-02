@@ -1,0 +1,25 @@
+.main_login{
+    padding: 0px 7px;
+}
+.login_head{
+    display: flex;
+    justify-content: center;
+    span{
+        font-size: 25px;
+        font-weight: 550;
+    }
+}
+form{
+    margin-top: 10px;
+}
+.validation{
+    color: red;
+}
+.form-group{
+    margin-top: 10px;
+}
+.invalid{
+    display: flex;
+    justify-content: center;
+    color: red;
+}

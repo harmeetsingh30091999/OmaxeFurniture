@@ -1,0 +1,30 @@
+<app-top-navbar></app-top-navbar>
+<div class="Orders_main">
+    <div class="orders_heading">
+        <span>My Inquiry</span>
+    </div>
+
+    <div class="orders_table">
+        <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">OrderId</th>
+                <th scope="col">ProductId</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Date of Order</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ord of this.orders; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{ord.product_id}}</td>
+                <td>{{ord.product_name}}</td>
+                <td class="table_img"><img src="{{ord.product_img}}"></td>
+                <td>{{ord.date2}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <span *ngIf="this.orders.length==0" style="padding: 4px;color: red;text-align: justify;">Your order is empty add some products..</span>
+    </div>
+</div>

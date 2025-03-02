@@ -1,0 +1,18 @@
+<app-top-navbar [name]="name"></app-top-navbar>
+<div class="main_category">
+    <div class="main_category_heading">
+        <span>All Category</span>
+    </div>
+    <div class="main_subcategory" *ngIf="Product">
+        <div class="main_category_box" *ngFor="let pro of Product">
+        <a routerLink="/Products/{{pro.product_category}}">
+            <img src="{{pro.product_img}}">
+            <div class="main_cate_cont">{{pro.product_name}} Collections -<span> Flat 50% off</span></div>
+        </a>
+        </div>
+    </div>
+    <div class="breaker_main"></div>
+</div>
+<div class="carousel_category">
+<app-product-carousel [productimages]="this.ProductCarousel" [trend]="title1"></app-product-carousel>
+</div>

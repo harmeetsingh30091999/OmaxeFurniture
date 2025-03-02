@@ -1,0 +1,24 @@
+<app-loginheader></app-loginheader>
+<div class="registeration_form">
+    <div class="form_heading"> <span>Registeration</span> </div>
+    <form (ngSubmit)="checkvalid()">
+        <div class="input_text"> <input type="text" [(ngModel)]="fullname" name="name" placeholder="Company Name" required>
+        </div>
+        <div class="input_text"> <input type="email" [(ngModel)]="username" name="username" placeholder="UserName" required>
+        </div>
+        <div class="input_text"> <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+        </div>
+        <div class="input_text"> <input type="text" [(ngModel)]="gstno" name="gstno" placeholder="Gst Number" required>
+        </div>
+        <div class="input_text"> <input type="text" [(ngModel)]="pancard" name="pancard" placeholder="Pancard" required>
+        </div>
+        <div class="input_text"> <input type="text" [(ngModel)]="adharcard" name="adharcard" placeholder="Adhar card" required>
+        </div>
+        <div class="input_text"> <input type="text" [(ngModel)]="email" name="email" placeholder="Email" required>
+        </div>
+        <button type="submit" class="btn-12">Submit</button>
+    </form>
+</div>
+<div *ngIf="this.message!=''" class="notify_message">
+<span>{{this.message}}</span>
+</div>

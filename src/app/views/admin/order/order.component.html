@@ -1,0 +1,41 @@
+<div class="main_section">
+    <div class="main_header">
+        <a routerLink="/admin/home"><div class="image"><img src="assets/images/arrow.png"></div></a><span>Admin Panel</span>
+    </div>
+    <div class="order_heading">
+      <span>
+        All Orders
+      </span>
+    </div>
+    <div class="orders_table">
+        <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">UserId</th>
+                <th scope="col">ProductId</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Price</th>
+                <th scope="col">Product After Discount</th>
+                <th scope="col">Date of Order</th>
+                <th scope="col">Image</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="this.orders">
+              <tr *ngFor="let ord of this.orders; ">
+                <!-- <th scope="row"></th> -->
+                <td>{{ord.userid}}</td>
+                <td>{{ord.product_id}}</td>
+                <td>{{ord.product_name}}</td>
+                <td>{{ord.product_price}}</td>
+                <td>{{ord.product_discounted_price}}</td>
+                <td>{{ord.date2}}</td>
+                <td class="table_img"><img src="{{ord.product_img}}"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="next_prev">
+          <button (click)="this.prevPage()"><mat-icon class="left_arrow">arrow_left</mat-icon></button>
+          <button (click)="this.nextPage()" *ngIf="this.orders.length!=0"><mat-icon class="left_arrow">arrow_right</mat-icon></button>
+        </div>  
+</div>

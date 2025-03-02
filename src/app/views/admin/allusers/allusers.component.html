@@ -1,0 +1,40 @@
+<div class="main_section">
+    <div class="main_header">
+        <a routerLink="/admin/home"><div class="image"><img src="assets/images/arrow.png"></div></a><span>Admin Panel</span>
+    </div>
+
+    <div class="orders_heading">
+        <span>
+          All Users
+        </span>
+    </div>  
+    <div class="orders_table">
+        <table class="table" >
+            <thead>
+              <tr>
+                <th scope="col">UserId</th>
+                <th scope="col">Email</th>
+                <th scope="col">AdharCard</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Pancard</th>
+                <th scope="col">GST Number</th>
+                <th scope="col">UserLoggedIn</th>
+              </tr>
+            </thead>
+            <tbody *ngIf="this.users">
+              <tr *ngFor="let ord of this.users;">
+                <!-- <th scope="row"></th> -->
+                <td>{{ord.userid}}</td>
+                <td>{{ord.email}}</td>
+                <td>{{ord.adharcard}}</td>
+                <td>{{ord.fullName}}</td>
+                <td>{{ord.pancard}}</td>
+                <td>{{ord.gstno}}</td>
+                <td *ngIf="ord.userloggedIn==true"><button class="active" (click)="MakeInactive(ord.userid)">Active</button></td>
+                <ng-template #inactive *ngIf="ord.userloggedIn==false"><button class="Inactive">inActive</button></ng-template>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+</div>

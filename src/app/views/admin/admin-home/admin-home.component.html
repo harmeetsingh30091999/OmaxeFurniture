@@ -1,0 +1,46 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened="true">
+        <mat-nav-list>
+            <mat-list-item>
+                <mat-icon mat-list-icon class="chevron-button sidenav-button" (click)="isExpanded = !isExpanded" [ngClass]="{'rotated': isExpanded}">chevron_right</mat-icon>
+            </mat-list-item>
+
+            <mat-list-item >
+                <a routerLink="/admin/order" class="rout_link1">
+                    <mat-icon mat-list-icon  class="">checkcircleoutlinesharp</mat-icon>
+                    <span *ngIf="isExpanded">Orders</span>
+                </a>
+            </mat-list-item>
+
+            <mat-list-item>
+                <a routerLink="/admin/allusers" class="rout_link1">
+                    <mat-icon mat-list-icon class="">person</mat-icon>
+                    <span *ngIf="isExpanded">Client</span>
+                </a>
+            </mat-list-item>
+
+            <mat-list-item>
+                <a routerLink="/admin/addproduct" class="rout_link1">
+                    <mat-icon mat-list-icon class="">add</mat-icon>
+                    <span *ngIf="isExpanded">Add Product</span>
+                </a>
+            </mat-list-item>
+
+            <mat-list-item>
+                <a routerLink="/admin/allproduct" class="rout_link1">
+                    <mat-icon mat-list-icon class="">list</mat-icon>
+                    <span *ngIf="isExpanded">All Product</span>
+                </a>
+            </mat-list-item>
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <div class="admin_content">
+        <div class="nav_top_cont"><h2>Admin Panel</h2></div>
+        <div class="welcom_msg">
+            <h3>Welcome to Bhutani Industries</h3>
+            <div class="button_21"><a routerLink="/admin/addproduct">Add Product</a></div>
+        </div>
+    </div>
+</mat-sidenav-container>

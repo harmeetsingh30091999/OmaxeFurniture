@@ -1,0 +1,30 @@
+<app-top-navbar [name]="category"></app-top-navbar>
+<div class="product_section">
+    <div class="product_total">
+        <span>20 products</span>
+    </div>
+    <div class="product_subsection">
+        <div class="product_col"
+        infiniteScroll
+        [infiniteScrollDistance]="2"
+        (scrolled)="onscroll()"
+        [scrollWindow]="true">
+            <div class="product_rw">
+                <div class="product_subrw">
+                    <div class="product_r1" *ngFor="let pro of product">
+                        <a routerLink="/Product/detail/{{pro.product_id}}">
+                        <div class="prod_img">
+                            <img [src]="pro.product_img" alt="Image">
+                        </div>
+                        <div class="pro_cont">
+                            <span class="pro_discounted">₹ {{pro.product_discounted_price}}</span>
+                            <span class="pro_actual">₹ {{pro.product_price}}</span>
+                            <p>{{pro.product_name}}</p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

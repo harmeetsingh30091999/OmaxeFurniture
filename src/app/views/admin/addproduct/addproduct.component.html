@@ -1,0 +1,38 @@
+<div class="main_section">
+    <div class="main_header">
+        <a routerLink="/admin/home"><div class="image"><img src="assets/images/arrow.png"></div></a><span>Admin Panel</span>
+    </div>
+
+    <div class="form_section">
+        <div class="heading"><span>Add Product</span></div>
+    <form (ngSubmit)="checkvalid()">
+        <label for="fname">Product name:</label><br>
+        <input type="text" id="fname" name="fname" [(ngModel)]="product_name"><br>
+        <label for="lname">Description:</label><br>
+        <input type="text" id="lname" name="lname" [(ngModel)]="product_description"><br>
+        <label for="cars">Choose Category:</label><br>
+            <select name="cars"  id="cars" form="carform" [(ngModel)]="product_category">
+                <option value="sofa">Sofa</option>
+                <option value="bed">Bed</option>
+                <option value="almirah">Almirah</option>
+                <option value="fan">Fan</option>
+            </select>
+        <label for="lname">Product Price:</label><br>
+        <input type="text" id="lname" name="lname" [(ngModel)]="product_price"><br>
+        <label for="lname">After Discount:</label><br>
+        <input type="text" id="lname" name="lname" [(ngModel)]="product_discount"><br>
+        <label for="lname">Choose Images:</label><br>
+        <input type="file" multiple id="lname" (change)="detectFiles($event)" name="image"><br>
+        <label for="lname">Feature1:</label><br>
+        <input type="text" id="lname" name="lname" [(ngModel)]="product_feature1"><br>
+        <label for="lname">Feature2:</label><br>
+        <input type="text" id="lname" name="lname" [(ngModel)]="product_feature2"><br>
+        <label for="lname">Feature3:</label><br>
+        <input type="text" id="lname" name="lname" [(ngModel)]="product_feature3"><br>
+        <label for="lname">Feature4:</label><br>
+        <input type="text" id="lname" name="lname" [(ngModel)]="product_feature4"><br>
+        <button type="submit" class="btn-12">Add</button>
+    </form>
+    <div><span style="color: red;margin-left: 5px;">{{this.msg}}</span></div>
+    </div>
+</div>

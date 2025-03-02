@@ -1,0 +1,98 @@
+.navbar-nav{
+    margin: 2px 8px
+}
+.nav_left_item{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.search_bar{
+    a{
+        color: white;
+    }
+}
+@media only screen and (max-width: 990px) {
+    .navbar{
+        // flex-direction: row-reverse;
+        // justify-content: left;
+        padding: 4px 9px;
+        background-color:rgb(143, 113, 86);
+        color: white;
+        -webkit-box-shadow: 0 10px 10px -10px #000000;
+        -moz-box-shadow: 0 10px 10px -10px #000000;
+        box-shadow: 0 10px 10px -10px #000000;
+    }
+    .navbar-light .navbar-nav .nav-link.active{
+        color: white;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color: rgba(255,255,255,0.6);
+    }
+    .navbar-brand{
+        color: white;
+        margin-left: 8px;
+    }
+    .navbar-brand:hover{
+        color: white;
+    }
+    .navbar-toggler{
+        color: white;
+        .navbar-toggler-icon{
+            color: white;
+        }
+    }
+    .search_bar{
+        width: auto;
+        text-align: end;
+    }
+}
+@media only screen and (max-width: 855px) {
+    // .search_bar{
+    //     width: 83%;
+    // }
+    .navbar{
+        // justify-content: center;
+        margin: 0px;
+        // padding: 4px 9px;    
+    }
+}
+@media only screen and (max-width: 760px) {
+    // .search_bar{
+    //     width: 80%;
+    // }
+}
+@media only screen and (max-width: 653px) {
+    // .search_bar{
+    //     width: 75%;
+    // }
+}
+@media only screen and (max-width: 530px) {
+    // .search_bar{
+    //     width: 70%;
+    // }
+}
+@media only screen and (max-width: 449px) {
+    // .search_bar{
+    //     width: 67%;
+    // }
+}
+@media only screen and (max-width: 408px) {
+    // .search_bar{
+    //     width: 64%;
+    // }
+}
+@media only screen and (max-width: 380px) {
+    // .search_bar{
+    //     width: 60%;
+    // }
+    .navbar-brand{
+        font-size: 18px;
+        margin-right: 0px;
+    }
+    .navbar-toggler{
+        font-size: 18px;
+    }
+}

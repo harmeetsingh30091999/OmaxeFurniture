@@ -1,0 +1,108 @@
+
+.image{
+    height: 250px;
+    width: auto;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.product_info_main{
+    display: flex;
+    justify-content: center;
+}
+.produt_info_submain{
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 10px;
+}
+.product_price{
+    display: flex;
+    align-items: center;
+    .price{
+        color: red;
+        font-family: serif;
+        font-weight: 670;
+        font-size: 21px;
+    }
+    .mrp{
+        color: darkgray;
+        font-size: 15px;
+        text-decoration: line-through;
+        margin-left: 6px;
+    }
+}
+.others{
+    display: flex;
+    flex-direction: column;
+    .other_content{
+        font-size: 12.3px;
+    }
+    .saving{
+        color: red;
+        font-size: 14px;
+        font-weight: 450;
+    }
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.product_features{
+    font-family: auto;
+    font-style: initial;
+    padding: 8px 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    .feature{
+        background-color: azure;
+        span{
+            font-weight: 550;
+        }
+    }
+    li{
+        font-size: 13px;
+        text-decoration: none;
+        list-style-type: auto;
+    }
+}
+.product_details{
+    padding: 8px 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+    .product_specific{
+        float: left;
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0px;
+        .product_name{
+            font-size: 14px;
+            font-weight: 490;
+        }
+        .product_val{
+            font-size: 13.8px;
+            font-weight: 465;
+            color:rgba(0,0,0,0.6);
+        }
+    }
+    .product_heading{
+        span{
+            font-weight: 550;
+            font-family: auto;
+            font-style: initial;
+        }
+    }
+}
+.product_policies{
+    .feature{
+        background-color: azure;
+        span{
+            font-weight: 550;
+        }   
+    }
+}
+.pro1221{
+    margin-top: 6px;
+    span{
+        font-weight: 550;
+    }
+}

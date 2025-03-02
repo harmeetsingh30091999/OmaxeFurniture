@@ -1,0 +1,19 @@
+<div class="bottom_main">
+    <div class="bottom_submain">
+        <button class="btn_321" (click)="Productinquiry()">INQUIRY</button>
+        <button class="btn_321">ADD TO BASKET</button>
+    </div>
+</div>
+<div class="inquiry_confirm" *ngIf="this.isconfirm">
+    <div class="inquiry_cont">{{this.msg}}</div>
+    <div class="confirm_cancel">
+        <button class="confirm" (click)="confirmInquiry()">Confirm</button>
+        <button class="cancel" (click)="cancelConfirm()">Cancel</button>
+    </div>
+</div>
+<div class="confirm_order" *ngIf="this.confirmMessage">
+    <div class="confirm_cont">{{this.msg}}</div>
+    <div class="confirm_image">
+        <img src="assets/images/confirmimage.jpg">
+    </div>
+</div>

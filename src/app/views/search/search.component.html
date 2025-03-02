@@ -1,0 +1,40 @@
+<div class="search_bar">
+    <div class="back_button">
+        <a routerLink="../"><img src="assets/images/arrow.png" alt=""></a>
+    </div>
+    <div class="search_button">
+        <input class="form-control mr-sm-2" (input)="onChanges($event)" type="search" placeholder="What are you looking for?"  aria-label="Search">
+    </div>    
+</div>
+
+<div class="">
+    <div class="product_section">
+        <div class="product_total">
+            <span> products</span>
+        </div>
+        <div class="product_subsection">
+            <div class="product_col"
+            infiniteScroll
+            [infiniteScrollDistance]="2"
+            
+            [scrollWindow]="true">
+                <div class="product_rw">
+                    <div class="product_subrw" *ngIf="product">
+                        <div class="product_r1" *ngFor="let pro of products">
+                            <a routerLink="/Product/detail/{{pro.product_id}}">
+                            <div class="prod_img">
+                                <img [src]="pro.product_img" alt="Image">
+                            </div>
+                            <div class="pro_cont">
+                                <span class="pro_discounted">₹ {{pro.product_discounted_price}}</span>
+                                <span class="pro_actual">₹ {{pro.product_price}}</span>
+                                <p>{{pro.product_name}}</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

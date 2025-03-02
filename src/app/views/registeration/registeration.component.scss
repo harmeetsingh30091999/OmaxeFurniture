@@ -1,0 +1,59 @@
+.registeration_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: beige;
+}
+.input_text{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin: 25px 0px;
+    padding: 0px 10px;
+    input[type="text"]{
+        width: 100%;
+        border: 1px solid grey;
+        border-radius: 4px;
+        height: 40px;
+
+    }
+    input[type="password"]{
+        width: 100%;
+        border: 1px solid grey;
+        border-radius: 4px;
+        height: 40px;
+    }
+    input[type="email"]{
+        width: 100%;
+        border: 1px solid grey;
+        border-radius: 4px;
+        height: 40px;
+    }
+}
+.btn-12{
+    margin-top: 6px;
+    margin-left: 6px;
+    background-color: rgba(0,0,235,0.8);
+    border-radius: 5px;
+    color: white;
+}
+.form_heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    span{
+        font-weight: 590;
+        font-size: 23px;
+        letter-spacing: 2.3px;
+    }
+}
+.notify_message{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(185, 104, 52,0.6);
+    margin-top: 5px;
+    span{
+        color: white;
+    }
+}
